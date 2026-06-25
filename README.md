@@ -1,4 +1,4 @@
-# 🍷 Audit données catalogue — E-commerce vins
+# 🍷 Audit données catalogue : E-commerce vins
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
@@ -7,13 +7,13 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-22c55e?style=flat-square)
 
-3 fichiers sources. 9 anomalies. 712 produits réconciliés. Une boutique de vins gérait son stock dans un ERP et son catalogue en ligne dans WooCommerce — **sans jamais vérifier que les deux systèmes se parlaient.**
+3 fichiers sources. 9 anomalies. 712 produits réconciliés. Une boutique de vins gérait son stock dans un ERP et son catalogue en ligne dans WooCommerce, **sans jamais vérifier que les deux systèmes se parlaient.**
 
 ---
 
 ## 📖 Contexte
 
-Une boutique de vins en ligne utilise deux systèmes distincts : un **ERP interne** (stocks, prix d'achat, références produits) et un **catalogue WEB WooCommerce** (fiches produits, données de vente). Ces deux sources ne partagent pas de clé commune directe — une table de liaison assure la correspondance via deux identifiants séparés.
+Une boutique de vins en ligne utilise deux systèmes distincts : un **ERP interne** (stocks, prix d'achat, références produits) et un **catalogue WEB WooCommerce** (fiches produits, données de vente). Ces deux sources ne partagent pas de clé commune directe, une table de liaison assure la correspondance via deux identifiants séparés.
 
 **La question :** les données sont-elles fiables ? Où sont les incohérences, et quel est leur impact financier réel ?
 
@@ -60,7 +60,7 @@ df_erp[df_erp["price"] < 0][["product_id", "price"]]
 
 ### 2️⃣ 88 produits actifs en stock sans visibilité en ligne
 
-88 références présentes dans l'ERP avec un stock disponible n'ont aucune correspondance dans le catalogue WEB. Ces produits ne sont pas commandables en ligne — du cash immobilisé sans aucune visibilité.
+88 références présentes dans l'ERP avec un stock disponible n'ont aucune correspondance dans le catalogue WEB. Ces produits ne sont pas commandables en ligne, du cash immobilisé sans aucune visibilité.
 
 ```python
 # Identification des produits ERP sans correspondance WEB
@@ -78,7 +78,7 @@ Parmi les 712 produits réconciliés, un article est vendu en dessous de son pri
 - Prix d'achat : **77,48 €**
 - Taux de marge : **-549 %**
 
-Probable erreur de saisie dans l'ERP — le prix de vente réel de ce champagne grand cru est bien supérieur.
+Probable erreur de saisie dans l'ERP, le prix de vente réel de ce champagne grand cru est bien supérieur.
 
 ```python
 # Calcul du taux de marge pour chaque produit
@@ -92,10 +92,10 @@ marge_negative = df_merge[df_merge["taux_marge"] < 0]
 print(f"Articles vendus à perte : {len(marge_negative)}")
 marge_negative[["post_title", "price", "purchase_price", "taux_marge"]]
 
-# Résultat : 1 article — Champagne Egly-Ouriet, taux de marge -549%
+# Résultat : 1 article : Champagne Egly-Ouriet, taux de marge -549%
 ```
 
-### 4️⃣ 419 références génèrent 80% du CA — Loi de Pareto vérifiée
+### 4️⃣ 419 références génèrent 80% du CA : Loi de Pareto vérifiée
 
 Sur 712 produits référencés, seulement 419 (58,8%) génèrent 80% du chiffre d'affaires d'octobre. Le même phénomène se vérifie côté quantités : 423 références représentent 80% des unités vendues.
 
@@ -120,7 +120,7 @@ print(f"Proportion du catalogue : {len(articles_80) / len(df_merge) * 100:.1f}%"
 
 ### 5️⃣ 276 859€ immobilisés en stocks
 
-La valorisation des stocks (prix de vente × quantités en stock) atteint **276 859,09 €** — soit environ **1,8× le CA mensuel**.
+La valorisation des stocks (prix de vente × quantités en stock) atteint **276 859,09 €**, soit environ **1,8× le CA mensuel**.
 
 16 711 unités en stock. Certains articles présentent une rotation quasi nulle : des bouteilles stockées en grande quantité sans ventes enregistrées sur la période.
 
@@ -142,8 +142,8 @@ print(f"Unités en stock : {df_merge['stock_quantity'].sum()}")
 
 **Les 3 problèmes prioritaires :**
 1. Des prix incorrects dans l'ERP (négatifs, ou manifestement faux comme le champagne à 12,65 €) faussent le CA et la valorisation des stocks
-2. 88 références actives en stock sont absentes du catalogue en ligne — du chiffre d'affaires potentiel invisible
-3. La valorisation des stocks (276 K€) représente 1,8× le CA mensuel — la rotation est trop lente sur une partie du catalogue
+2. 88 références actives en stock sont absentes du catalogue en ligne, du chiffre d'affaires potentiel invisible
+3. La valorisation des stocks (276 K€) représente 1,8× le CA mensuel, la rotation est trop lente sur une partie du catalogue
 
 ---
 
@@ -165,7 +165,7 @@ print(f"Unités en stock : {df_merge['stock_quantity'].sum()}")
 
 **3. Prioriser les 419 références Pareto**
 - Concentrer les efforts de vérification de stock sur ces 419 articles
-- Ce sont eux qui portent le CA — toute rupture sur ces références a un impact immédiat
+- Ce sont eux qui portent le CA, toute rupture sur ces références a un impact immédiat
 
 ### 🌱 Long terme (3-12 mois)
 
@@ -196,9 +196,9 @@ print(f"Unités en stock : {df_merge['stock_quantity'].sum()}")
 ├── README.md                  # Documentation du projet
 ├── audit_catalogue.ipynb      # Notebook Jupyter complet
 └── data/
-    ├── erp.xlsx               # 825 lignes — stocks, prix d'achat, références
-    ├── web.xlsx               # 1 513 lignes — catalogue WooCommerce (ventes, métadonnées)
-    └── liaison.xlsx           # 825 lignes — table de correspondance ERP ↔ WEB
+    ├── erp.xlsx               # 825 lignes, stocks, prix d'achat, références
+    ├── web.xlsx               # 1 513 lignes, catalogue WooCommerce (ventes, métadonnées)
+    └── liaison.xlsx           # 825 lignes, table de correspondance ERP ↔ WEB
 ```
 
 ---
@@ -242,7 +242,7 @@ print(f"Produits réconciliés : {len(df_merge)}")
 # Résultat : 712 produits avec données complètes
 ```
 
-### Détection des prix atypiques — méthode IQR
+### Détection des prix atypiques : méthode IQR
 
 ```python
 # Calcul du seuil outliers par l'intervalle interquartile
@@ -256,10 +256,10 @@ print(f"Seuil outliers (Q3 + 1.5×IQR) : {seuil_haut:.2f} €")
 
 outliers_iqr = df_merge[df_merge["price"] > seuil_haut]
 print(f"Articles outliers : {len(outliers_iqr)} ({len(outliers_iqr)/len(df_merge)*100:.1f}%)")
-# Résultat : 31 articles (4,4%) — champagnes millésimés et grands crus
+# Résultat : 31 articles (4,4%) : champagnes millésimés et grands crus
 ```
 
-### Analyse Pareto — concentration du CA
+### Analyse Pareto : concentration du CA
 
 ```python
 # Tri par CA décroissant + cumul
@@ -308,9 +308,9 @@ Data Analyst | 10 ans d'expérience Business (retail + e-commerce) → Reconvers
 
 ## 🔗 Autres projets
 
-- [Étude sous-nutrition mondiale — FAO](https://github.com/Heltondsm/etude-sante-publique-fao) — 4 datasets ONU, paradoxe production/répartition, recommandations politiques
-- [Exploration SQL — Portefeuille assurances habitation](https://github.com/Heltondsm/sql-assurances-habitation) — 50K+ contrats, segmentation géographique, opportunités de croissance
-- [Performance e-commerce — Prévision SARIMA](https://github.com/Heltondsm/ecommerce-sales-analysis-sarima) — Séries temporelles, grid search sur 64 modèles, RMSE ±12%
+- [Étude sous-nutrition mondiale, FAO](https://github.com/Heltondsm/etude-sante-publique-fao), 4 datasets ONU, paradoxe production/répartition, recommandations politiques
+- [Exploration SQL, Portefeuille assurances habitation](https://github.com/Heltondsm/sql-assurances-habitation), 50K+ contrats, segmentation géographique, opportunités de croissance
+- [Performance e-commerce, Prévision SARIMA](https://github.com/Heltondsm/ecommerce-sales-analysis-sarima), Séries temporelles, grid search sur 64 modèles, RMSE ±12%
 
 ---
 

@@ -298,7 +298,7 @@ print(f"Proportion : {len(articles_80)/len(df_merge)*100:.1f}% du catalogue")
 ## 📧 Contact
 
 **Helton Dos Santos Moreira**
-Data Analyst | 10 ans d'expérience Business (retail + e-commerce) → Reconversion Data
+Data Analyst / Data Engineer | 10 ans d'expérience business (retail et e-commerce)
 
 - 📧 Email : heltonmail8@gmail.com
 - 💼 LinkedIn : [in/helton-dsm-data](https://linkedin.com/in/helton-dsm-data)
@@ -308,9 +308,9 @@ Data Analyst | 10 ans d'expérience Business (retail + e-commerce) → Reconvers
 
 ## 🔗 Autres projets
 
-- [Étude sous-nutrition mondiale, FAO](https://github.com/Heltondsm/etude-sante-publique-fao), 4 datasets ONU, paradoxe production/répartition, recommandations politiques
-- [Exploration SQL, Portefeuille assurances habitation](https://github.com/Heltondsm/sql-assurances-habitation), 50K+ contrats, segmentation géographique, opportunités de croissance
-- [Performance e-commerce, Prévision SARIMA](https://github.com/Heltondsm/ecommerce-sales-analysis-sarima), Séries temporelles, grid search sur 64 modèles, RMSE ±12%
+- [Tendances du streaming musical : tests statistiques et Prophet](https://github.com/Heltondsm/analyse-streaming-musical), 114 000 morceaux Spotify, 3 tests avec leur taille d'effet, prévision confrontée à un modèle naïf
+- [Pipeline dbt : profils sociodémographiques](https://github.com/Heltondsm/dbt-demographics-pipeline), Snowflake et DuckDB, 26 tests, reproductible en une commande
+- [Pipeline de veille du marché de l'emploi](https://github.com/Heltondsm/job-market-pipeline), APIs France Travail et INSEE Sirene, 698 offres et 1 166 entreprises en 11 secondes
 
 ---
 

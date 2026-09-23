@@ -143,7 +143,7 @@ print(f"Unités en stock : {df_merge['stock_quantity'].sum()}")
 **Les 3 problèmes prioritaires :**
 1. Des prix incorrects dans l'ERP (négatifs, ou manifestement faux comme le champagne à 12,65 €) faussent le CA et la valorisation des stocks
 2. 88 références actives en stock sont absentes du catalogue en ligne, du chiffre d'affaires potentiel invisible
-3. La valorisation des stocks (276 K€) représente 1,8× le CA mensuel, la rotation est trop lente sur une partie du catalogue
+3. La valorisation des stocks (276 859 €) représente 1,8× le CA mensuel, la rotation est trop lente sur une partie du catalogue
 
 ---
 
@@ -171,7 +171,7 @@ print(f"Unités en stock : {df_merge['stock_quantity'].sum()}")
 
 **4. Traiter les stocks à rotation lente**
 - Identifier les articles avec stock > 12 mois de ventes → actions commerciales (promotions, déréférencement)
-- La valorisation à 276 K€ pour 153 K€ de CA mensuel indique un surstockage structurel sur certaines références
+- La valorisation à 276 859 € pour 153 K€ de CA mensuel indique un surstockage structurel sur certaines références
 
 **5. Mettre en place un monitoring qualité données**
 - Contrôle automatique des prix négatifs, SKU non conformes et ruptures de correspondance ERP/WEB

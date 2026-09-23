@@ -312,6 +312,7 @@ Data Analyst / Data Engineer | 10 ans d'expérience business (retail et e-commer
 - [Pipeline dbt : profils sociodémographiques](https://github.com/Heltondsm/dbt-demographics-pipeline), Snowflake et DuckDB, 26 tests, reproductible en une commande
 - [Pipeline de veille du marché de l'emploi](https://github.com/Heltondsm/job-market-pipeline), APIs France Travail et INSEE Sirene, 698 offres et 1 166 entreprises en 11 secondes
 
+- [Tableau de bord Power BI : portefeuille de projets](https://github.com/Heltondsm/powerbi-portefeuille-projets-rls), 104 projets dans 52 pays, sécurité au niveau des lignes sur 3 rôles, 16 mesures DAX
 ---
 
 **Projet réalisé en avril 2026**

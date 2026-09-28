@@ -311,8 +311,9 @@ Data Analyst / Data Engineer | 10 ans d'expérience business (retail et e-commer
 - [Tendances du streaming musical : tests statistiques et Prophet](https://github.com/Heltondsm/analyse-streaming-musical), 114 000 morceaux Spotify, 3 tests avec leur taille d'effet, prévision confrontée à un modèle naïf
 - [Pipeline dbt : profils sociodémographiques](https://github.com/Heltondsm/dbt-demographics-pipeline), Snowflake et DuckDB, 26 tests, reproductible en une commande
 - [Pipeline de veille du marché de l'emploi](https://github.com/Heltondsm/job-market-pipeline), APIs France Travail et INSEE Sirene, 698 offres et 1 166 entreprises en 11 secondes
-
 - [Tableau de bord Power BI : portefeuille de projets](https://github.com/Heltondsm/powerbi-portefeuille-projets-rls), 104 projets dans 52 pays, sécurité au niveau des lignes sur 3 rôles, 16 mesures DAX
+- [Tableau de bord Power BI : aide à la décision sur l'eau potable](https://github.com/Heltondsm/powerbi-aide-decision-eau-potable), 5 sources OMS et FAO, curseur de stabilité politique qui change la recommandation en direct
+
 ---
 
 **Projet réalisé en avril 2026**

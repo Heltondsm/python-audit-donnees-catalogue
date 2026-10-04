@@ -95,7 +95,7 @@ marge_negative[["post_title", "price", "purchase_price", "taux_marge"]]
 # Résultat : 1 article : Champagne Egly-Ouriet, taux de marge -549%
 ```
 
-### 4️⃣ 419 références génèrent 80% du CA : Loi de Pareto vérifiée
+### 4️⃣ 419 références sur 712 génèrent 80 % du chiffre d'affaires
 
 Sur 712 produits référencés, seulement 419 (58,8%) génèrent 80% du chiffre d'affaires d'octobre. Le même phénomène se vérifie côté quantités : 423 références représentent 80% des unités vendues.
 
@@ -163,7 +163,7 @@ print(f"Unités en stock : {df_merge['stock_quantity'].sum()}")
 - Ou décider consciemment de ne pas les mettre en ligne (et identifier pourquoi)
 - Établir un process de synchronisation ERP → WEB à chaque nouvelle référence
 
-**3. Prioriser les 419 références Pareto**
+**3. Prioriser les 419 références qui font 80 % du chiffre d'affaires**
 - Concentrer les efforts de vérification de stock sur ces 419 articles
 - Ce sont eux qui portent le CA, toute rupture sur ces références a un impact immédiat
 
@@ -259,7 +259,7 @@ print(f"Articles outliers : {len(outliers_iqr)} ({len(outliers_iqr)/len(df_merge
 # Résultat : 31 articles (4,4%) : champagnes millésimés et grands crus
 ```
 
-### Analyse Pareto : concentration du CA
+### Analyse de concentration du chiffre d'affaires
 
 ```python
 # Tri par CA décroissant + cumul
@@ -282,7 +282,7 @@ print(f"Proportion : {len(articles_80)/len(df_merge)*100:.1f}% du catalogue")
 - ✅ Nettoyage et correction de données multi-sources (ERP + WEB + Liaison)
 - ✅ Jointures Pandas avec clés non directes (triple jointure via table intermédiaire)
 - ✅ Détection d'outliers par méthode statistique (IQR) et z-score
-- ✅ Analyse Pareto (cumsum sur CA et quantités)
+- ✅ Analyse de concentration du chiffre d'affaires et des quantités (sommes cumulées)
 - ✅ Calcul de taux de marge, valorisation de stocks, corrélations multivariées
 - ✅ Visualisations interactives (Plotly boxplot) et heatmap de corrélations (Seaborn)
 
@@ -308,10 +308,10 @@ Data Analyst / Data Engineer | 10 ans d'expérience business (retail et e-commer
 
 ## 🔗 Autres projets
 
-- [Tendances du streaming musical : tests statistiques et Prophet](https://github.com/Heltondsm/analyse-streaming-musical), 114 000 morceaux Spotify, 3 tests avec leur taille d'effet, prévision confrontée à un modèle naïf
+- [Tendances du streaming musical : tests statistiques et Prophet](https://github.com/Heltondsm/analyse-streaming-musical), 114 000 morceaux Spotify, 3 tests avec leur taille d'effet, calendrier de sortie et prévision à 6 mois
 - [Pipeline dbt : profils sociodémographiques](https://github.com/Heltondsm/dbt-demographics-pipeline), Snowflake et DuckDB, 26 tests, reproductible en une commande
-- [Pipeline de veille du marché de l'emploi](https://github.com/Heltondsm/job-market-pipeline), APIs France Travail et INSEE Sirene, 698 offres et 1 166 entreprises en 11 secondes
-- [Tableau de bord Power BI : portefeuille de projets](https://github.com/Heltondsm/powerbi-portefeuille-projets-rls), 104 projets dans 52 pays, sécurité au niveau des lignes sur 3 rôles, 16 mesures DAX
+- [Pipeline de veille du marché de l'emploi](https://github.com/Heltondsm/job-market-pipeline), APIs France Travail et INSEE Sirene, 787 offres et 1 135 entreprises en 14 secondes
+- [Tableau de bord Power BI : portefeuille de projets](https://github.com/Heltondsm/powerbi-portefeuille-projets-rls), 104 projets dans 52 pays, sécurité au niveau des lignes sur 3 rôles, 25 mesures DAX
 - [Tableau de bord Power BI : aide à la décision sur l'eau potable](https://github.com/Heltondsm/powerbi-aide-decision-eau-potable), 5 sources OMS et FAO, curseur de stabilité politique qui change la recommandation en direct
 
 ---

@@ -1,4 +1,4 @@
-# 🍷 Audit données catalogue : E-commerce vins
+# 🍷 Audit de la qualité des données d'un catalogue e-commerce
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)

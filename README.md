@@ -308,7 +308,7 @@ Data Analyst | 10 ans d'expérience business (retail et e-commerce)
 
 ## 🔗 Autres projets
 
-- [CRM data et agents IA : centraliser offres, contacts et échanges](https://github.com/Heltondsm/crm-data-agents-ia), PostgreSQL alimenté par des API, collecte Python planifiée, offres notées par IA, 745 relations LinkedIn analysées
+- [CRM data et agents IA : centraliser offres, contacts et échanges](https://github.com/Heltondsm/crm-data-agents-ia), PostgreSQL alimenté par des API, collecte Python planifiée, offres notées par IA, testé automatiquement à chaque push
 - [Tendances du streaming musical : tests statistiques et Prophet](https://github.com/Heltondsm/analyse-streaming-musical), 114 000 morceaux Spotify, 3 tests avec leur taille d'effet, calendrier de sortie et prévision à 6 mois
 - [Pipeline dbt : profils sociodémographiques](https://github.com/Heltondsm/dbt-demographics-pipeline), Snowflake et DuckDB, 26 tests, reproductible en une commande
 - [Pipeline de veille du marché de l'emploi](https://github.com/Heltondsm/job-market-pipeline), APIs France Travail et INSEE Sirene, 787 offres et 1 135 entreprises en 14 secondes

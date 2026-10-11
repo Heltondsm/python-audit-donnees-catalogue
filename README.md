@@ -298,7 +298,7 @@ print(f"Proportion : {len(articles_80)/len(df_merge)*100:.1f}% du catalogue")
 ## 📧 Contact
 
 **Helton Dos Santos Moreira**
-Data Analyst / Data Engineer | 10 ans d'expérience business (retail et e-commerce)
+Data Analyst | 10 ans d'expérience business (retail et e-commerce)
 
 - 📧 Email : heltonmail8@gmail.com
 - 💼 LinkedIn : [in/helton-dsm-data](https://linkedin.com/in/helton-dsm-data)

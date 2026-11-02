@@ -308,7 +308,6 @@ Data Analyst | 10 ans d'expérience business (retail et e-commerce)
 
 ## 🔗 Autres projets
 
-- [Pipeline Analytics Engineering : quels outils data enseigner, et où ?](https://github.com/Heltondsm/job-market-analytics), Airflow, dbt et BigQuery, 2 110 offres modélisées et 32 tests
 - [CRM data et agents IA : centraliser opportunités, contacts et échanges](https://github.com/Heltondsm/crm-data-agents-ia), PostgreSQL alimenté par des API, collecte Python planifiée, opportunités notées par IA, testé automatiquement à chaque push
 - [Tendances du streaming musical : tests statistiques et Prophet](https://github.com/Heltondsm/analyse-streaming-musical), 114 000 morceaux Spotify, 3 tests avec leur taille d'effet, calendrier de sortie et prévision à 6 mois
 - [Pipeline dbt : profils sociodémographiques](https://github.com/Heltondsm/dbt-demographics-pipeline), Snowflake et DuckDB, 26 tests, reproductible en une commande
